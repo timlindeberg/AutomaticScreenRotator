@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     
     let motionManager: CMMotionManager = CMMotionManager()
     let connection = Connection()
-    var timer: NSTimer = NSTimer()
     
     @IBOutlet weak var connectedStatus: UILabel!
     
@@ -30,7 +29,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector : "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
-        timer = newTimer()
     
         connection.onConnected({
             self.connectedStatus.textColor = ViewController.Green
@@ -45,21 +43,10 @@ class ViewController: UIViewController {
         self.connection.connect(ViewController.IP, port: ViewController.Port)
     }
 
-    
-    func tryConnect(){
-        connection.open()
-    }
-    
-    func newTimer() -> NSTimer {
-        return NSTimer.scheduledTimerWithTimeInterval(ViewController.UpdateInterval, target: self, selector: "tryConnect", userInfo: nil, repeats: true)
-    }
-    
     func rotated(){
         if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)){
-            print("Landscape")
             connection.send("L")
         }else{
-            print("Portrait")
             connection.send("P")
         }
     }
@@ -96,9 +83,6 @@ class ViewController: UIViewController {
                 return
             }
             
-            
-            print("Trying to connect...")
-            
             var readStream: Unmanaged<CFReadStream>?
             var writeStream: Unmanaged<CFWriteStream>?
             
@@ -117,38 +101,20 @@ class ViewController: UIViewController {
             inp.open()
         }
         
-        func open(){
-            if(out != nil){
-                out.open()
-            }
-            if(inp != nil){
-                inp.open()
-            }
-        }
-        
         func stream(stream: NSStream, handleEvent eventCode: NSStreamEvent){
             if(stream === inp){
                 switch eventCode {
-                case NSStreamEvent.HasBytesAvailable:
-                    print("Connection closed!")
-                    disconnect()
-                default:
-                    break
+                case NSStreamEvent.HasBytesAvailable: disconnect()
+                default:                              break
                 }
             }else{
                 switch eventCode {
-                case NSStreamEvent.OpenCompleted:
-                    print("Conection opened!")
-                    connect()
-                case NSStreamEvent.ErrorOccurred:
-                    print("Error connecting")
-                    disconnect()
-                default:
-                    break
+                case NSStreamEvent.OpenCompleted: connect()
+                case NSStreamEvent.ErrorOccurred: disconnect()
+                default:                          break
                 }
             }
         }
-        
         
         private func connect() {
             if(isConnected || onConnectedFunc == nil){

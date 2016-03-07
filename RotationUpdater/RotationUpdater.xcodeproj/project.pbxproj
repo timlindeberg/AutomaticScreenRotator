@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B2A8CE41C8B6F10008986E0 /* Sockets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2A8CE31C8B6F10008986E0 /* Sockets */; };
 		1B4D07181C8B0DFD00D1CBDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4D07171C8B0DFD00D1CBDB /* AppDelegate.swift */; };
 		1B4D071A1C8B0DFD00D1CBDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4D07191C8B0DFD00D1CBDB /* ViewController.swift */; };
 		1B4D071D1C8B0DFD00D1CBDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4D071B1C8B0DFD00D1CBDB /* Main.storyboard */; };
 		1B4D071F1C8B0DFD00D1CBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B4D071E1C8B0DFD00D1CBDB /* Assets.xcassets */; };
 		1B4D07221C8B0DFD00D1CBDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4D07201C8B0DFD00D1CBDB /* LaunchScreen.storyboard */; };
-		1B4D072D1C8B0DFE00D1CBDB /* RotationUpdaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4D072C1C8B0DFE00D1CBDB /* RotationUpdaterTests.swift */; };
-		1B4D07381C8B0DFE00D1CBDB /* RotationUpdaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4D07371C8B0DFE00D1CBDB /* RotationUpdaterUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +32,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B2A8CE31C8B6F10008986E0 /* Sockets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sockets; path = /Users/timlindeberg/RotationUpdater/RotationUpdater/Sockets; sourceTree = "<absolute>"; };
 		1B4D07141C8B0DFD00D1CBDB /* RotationUpdater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotationUpdater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4D07171C8B0DFD00D1CBDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B4D07191C8B0DFD00D1CBDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +40,7 @@
 		1B4D07211C8B0DFD00D1CBDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B4D07231C8B0DFD00D1CBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B4D07281C8B0DFE00D1CBDB /* RotationUpdaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotationUpdaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B4D072C1C8B0DFE00D1CBDB /* RotationUpdaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationUpdaterTests.swift; sourceTree = "<group>"; };
-		1B4D072E1C8B0DFE00D1CBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B4D07331C8B0DFE00D1CBDB /* RotationUpdaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotationUpdaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B4D07371C8B0DFE00D1CBDB /* RotationUpdaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationUpdaterUITests.swift; sourceTree = "<group>"; };
-		1B4D07391C8B0DFE00D1CBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				1B4D07161C8B0DFD00D1CBDB /* RotationUpdater */,
-				1B4D072B1C8B0DFE00D1CBDB /* RotationUpdaterTests */,
-				1B4D07361C8B0DFE00D1CBDB /* RotationUpdaterUITests */,
 				1B4D07151C8B0DFD00D1CBDB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,24 +97,6 @@
 				1B4D07231C8B0DFD00D1CBDB /* Info.plist */,
 			);
 			path = RotationUpdater;
-			sourceTree = "<group>";
-		};
-		1B4D072B1C8B0DFE00D1CBDB /* RotationUpdaterTests */ = {
-			isa = PBXGroup;
-			children = (
-				1B4D072C1C8B0DFE00D1CBDB /* RotationUpdaterTests.swift */,
-				1B4D072E1C8B0DFE00D1CBDB /* Info.plist */,
-			);
-			path = RotationUpdaterTests;
-			sourceTree = "<group>";
-		};
-		1B4D07361C8B0DFE00D1CBDB /* RotationUpdaterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1B4D07371C8B0DFE00D1CBDB /* RotationUpdaterUITests.swift */,
-				1B4D07391C8B0DFE00D1CBDB /* Info.plist */,
-			);
-			path = RotationUpdaterUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +212,6 @@
 				1B4D07221C8B0DFD00D1CBDB /* LaunchScreen.storyboard in Resources */,
 				1B4D071F1C8B0DFD00D1CBDB /* Assets.xcassets in Resources */,
 				1B4D071D1C8B0DFD00D1CBDB /* Main.storyboard in Resources */,
-				1B2A8CE41C8B6F10008986E0 /* Sockets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B4D072D1C8B0DFE00D1CBDB /* RotationUpdaterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B4D07381C8B0DFE00D1CBDB /* RotationUpdaterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
