@@ -8,5 +8,7 @@ The application works by attaching an old iPhone to the back of screen:
 The iPhone runs an app (RotationUpdater) which sends it's rotation mode (portrait or landscape) over a socket to the server (RotatorServer).
 When the server recieves a rotation update from the phone it sets the corresponding rotation mode for the screen. The server currently only has a few settings specified in the settings file. You can specify the screen index to use and the position in the virtual desktop that the screen should have in portrait and landscape mode. 
 
+The iPhone app is written in Swift and the server is written in C++.
+
 The result can be seen here:
 https://youtu.be/x90C_2l0xto
